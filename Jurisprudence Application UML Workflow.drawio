@@ -1,6 +1,6 @@
-<mxfile host="www.draw.io" modified="2019-11-01T15:55:29.760Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36" etag="2HA6w19XBslUkPKtIN5y" version="12.1.9" type="github" pages="1">
+<mxfile host="www.draw.io" modified="2019-11-01T16:05:20.769Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36" etag="h8w8ISx3Czvnaz3IlgOo" version="12.1.9" type="github" pages="1">
   <diagram name="Page-1" id="e7e014a7-5840-1c2e-5031-d8a46d1fe8dd">
-    <mxGraphModel dx="1408" dy="699" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="1408" dy="748" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
@@ -82,6 +82,9 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="140" y="252" as="targetPoint"/>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="zbCqpcpXdRwh8xc6tJT4-40" value="ValidDates&lt;br&gt;(adx:CrmEntityListView)" style="html=1;" vertex="1" parent="3">
+          <mxGeometry x="147.5" y="332" width="135" height="50" as="geometry"/>
         </mxCell>
         <mxCell id="4" value="Thread 3" style="swimlane;whiteSpace=wrap" parent="1" vertex="1">
           <mxGeometry x="840" y="128" width="340" height="570" as="geometry"/>
