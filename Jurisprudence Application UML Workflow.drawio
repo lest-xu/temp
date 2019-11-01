@@ -1,11 +1,11 @@
-<mxfile host="www.draw.io" modified="2019-11-01T16:12:02.706Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36" etag="gmRvE3B_zarB_84P79BZ" version="12.1.9" type="github" pages="1">
+<mxfile host="www.draw.io" modified="2019-11-01T18:39:29.682Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36" etag="eiXQfzn0dP4JEzjf4zC3" version="12.1.9" type="github" pages="1">
   <diagram name="Page-1" id="e7e014a7-5840-1c2e-5031-d8a46d1fe8dd">
     <mxGraphModel dx="1408" dy="748" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
         <mxCell id="2" value="1. Authentication" style="swimlane;whiteSpace=wrap" parent="1" vertex="1">
-          <mxGeometry x="165" y="128" width="225" height="570" as="geometry"/>
+          <mxGeometry x="165" y="128" width="680" height="1340" as="geometry"/>
         </mxCell>
         <mxCell id="5" value="" style="ellipse;shape=startState;fillColor=#000000;strokeColor=#ff0000;" parent="2" vertex="1">
           <mxGeometry x="99" y="172" width="30" height="30" as="geometry"/>
@@ -52,6 +52,39 @@
         <mxCell id="zbCqpcpXdRwh8xc6tJT4-42" value="User" style="shape=umlActor;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;html=1;" vertex="1" parent="2">
           <mxGeometry x="99" y="42" width="30" height="60" as="geometry"/>
         </mxCell>
+        <mxCell id="4" value="Thread 3" style="swimlane;whiteSpace=wrap" parent="2" vertex="1">
+          <mxGeometry y="570" width="680" height="770" as="geometry"/>
+        </mxCell>
+        <mxCell id="33" value="process&#xa;command" style="" parent="4" vertex="1">
+          <mxGeometry x="539" y="612" width="110" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="37" value="" style="edgeStyle=none;strokeColor=#FF0000;endArrow=open;endFill=1;rounded=0" parent="4" target="33" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="419" y="636.5" as="sourcePoint"/>
+            <mxPoint x="539" y="636.5" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="38" value="" style="ellipse;shape=endState;fillColor=#000000;strokeColor=#ff0000" parent="4" vertex="1">
+          <mxGeometry x="579" y="707" width="30" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="39" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0" parent="4" source="33" target="38" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="zbCqpcpXdRwh8xc6tJT4-56" value="IsApplicationAccessBlocked &#xa;(Adxstudio.Xrm.Web.UI.CrmEntityListView)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="4">
+          <mxGeometry x="45" y="72" width="330" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="zbCqpcpXdRwh8xc6tJT4-57" value="+ OrganizationServiceContext: ctcmpao_examinationdate" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zbCqpcpXdRwh8xc6tJT4-56">
+          <mxGeometry y="26" width="330" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="zbCqpcpXdRwh8xc6tJT4-58" value="+ EntityReference: ctcmpao_examinationdateid" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zbCqpcpXdRwh8xc6tJT4-56">
+          <mxGeometry y="52" width="330" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="zbCqpcpXdRwh8xc6tJT4-59" value="+ applicationType: Available Jurisprudence Exam Dates Portal" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zbCqpcpXdRwh8xc6tJT4-56">
+          <mxGeometry y="78" width="330" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="zbCqpcpXdRwh8xc6tJT4-60" value="+ examtype: 10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zbCqpcpXdRwh8xc6tJT4-56">
+          <mxGeometry y="104" width="330" height="26" as="geometry"/>
+        </mxCell>
         <mxCell id="3" value="2. Load Valid Exam Dates" style="swimlane;whiteSpace=wrap" parent="1" vertex="1">
           <mxGeometry x="390" y="128" width="450" height="570" as="geometry"/>
         </mxCell>
@@ -81,7 +114,7 @@
             <mxPoint x="105" y="172" as="sourcePoint"/>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Et23XqPSTgTjZvxR6nic-63" value="return" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" parent="3" edge="1">
+        <mxCell id="Et23XqPSTgTjZvxR6nic-63" value="return" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;" parent="3" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="180" y="276" as="targetPoint"/>
             <mxPoint x="45" y="276" as="sourcePoint"/>
@@ -97,24 +130,6 @@
             <mxPoint as="offset"/>
           </mxGeometry>
         </mxCell>
-        <mxCell id="4" value="Thread 3" style="swimlane;whiteSpace=wrap" parent="1" vertex="1">
-          <mxGeometry x="840" y="128" width="340" height="570" as="geometry"/>
-        </mxCell>
-        <mxCell id="33" value="process&#xa;command" style="" parent="4" vertex="1">
-          <mxGeometry x="90" y="405" width="110" height="50" as="geometry"/>
-        </mxCell>
-        <mxCell id="37" value="" style="edgeStyle=none;strokeColor=#FF0000;endArrow=open;endFill=1;rounded=0" parent="4" target="33" edge="1">
-          <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="-30" y="429.5" as="sourcePoint"/>
-            <mxPoint x="90" y="429.5" as="targetPoint"/>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="38" value="" style="ellipse;shape=endState;fillColor=#000000;strokeColor=#ff0000" parent="4" vertex="1">
-          <mxGeometry x="130" y="500" width="30" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="39" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0" parent="4" source="33" target="38" edge="1">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
         <mxCell id="20" value="" style="endArrow=open;strokeColor=#82b366;endFill=1;rounded=0;fillColor=#d5e8d4;entryX=0.2;entryY=0.577;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="10" target="Et23XqPSTgTjZvxR6nic-61" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="450" y="205" as="targetPoint"/>
@@ -126,9 +141,6 @@
         </mxCell>
         <mxCell id="Et23XqPSTgTjZvxR6nic-41" value="&lt;h1&gt;Jurisprudence Application UML Workflow&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="360" y="70" width="510" height="50" as="geometry"/>
-        </mxCell>
-        <mxCell id="Et23XqPSTgTjZvxR6nic-43" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="160" y="720" width="40" height="20" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
