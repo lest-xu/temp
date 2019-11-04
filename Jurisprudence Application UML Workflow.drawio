@@ -1,11 +1,11 @@
-<mxfile host="www.draw.io" modified="2019-11-04T16:03:52.971Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36" etag="tU35NLza_V1QUMT_uC-p" version="12.2.0" type="github" pages="1">
+<mxfile host="www.draw.io" modified="2019-11-04T16:05:16.956Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36" etag="8Q5fE_0ipE7TQP5R7fOW" version="12.2.0" type="github" pages="1">
   <diagram name="Page-1" id="e7e014a7-5840-1c2e-5031-d8a46d1fe8dd">
     <mxGraphModel dx="1408" dy="748" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
         <mxCell id="2" value="1. Authentication" style="swimlane;whiteSpace=wrap" parent="1" vertex="1">
-          <mxGeometry x="165" y="128" width="680" height="1340" as="geometry"/>
+          <mxGeometry x="165" y="128" width="690" height="1362" as="geometry"/>
         </mxCell>
         <mxCell id="5" value="" style="ellipse;shape=startState;fillColor=#000000;strokeColor=#ff0000;" parent="2" vertex="1">
           <mxGeometry x="99" y="172" width="30" height="30" as="geometry"/>
@@ -53,7 +53,7 @@
           <mxGeometry x="99" y="42" width="30" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="4" value="Thread 3" style="swimlane;whiteSpace=wrap" parent="2" vertex="1">
-          <mxGeometry y="570" width="680" height="770" as="geometry"/>
+          <mxGeometry y="570" width="690" height="792" as="geometry"/>
         </mxCell>
         <mxCell id="33" value="process&#xa;command" style="" parent="4" vertex="1">
           <mxGeometry x="539" y="612" width="110" height="50" as="geometry"/>
@@ -71,7 +71,7 @@
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="zbCqpcpXdRwh8xc6tJT4-56" value="IsApplicationAccessBlocked &#xa;(Adxstudio.Xrm.Web.UI.CrmEntityListView)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="4" vertex="1">
-          <mxGeometry x="45" y="72" width="330" height="130" as="geometry"/>
+          <mxGeometry x="319" y="52" width="330" height="130" as="geometry"/>
         </mxCell>
         <mxCell id="zbCqpcpXdRwh8xc6tJT4-57" value="+ OrganizationServiceContext: ServiceContext" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="zbCqpcpXdRwh8xc6tJT4-56" vertex="1">
           <mxGeometry y="26" width="330" height="26" as="geometry"/>
@@ -85,8 +85,11 @@
         <mxCell id="zbCqpcpXdRwh8xc6tJT4-60" value="+ examtype: 824530001 (Jurisprudence)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="zbCqpcpXdRwh8xc6tJT4-56" vertex="1">
           <mxGeometry y="104" width="330" height="26" as="geometry"/>
         </mxCell>
+        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-39" value="ValidDates&lt;br&gt;(adx:CrmEntityListView)" style="html=1;" vertex="1" parent="4">
+          <mxGeometry x="75" y="103" width="135" height="50" as="geometry"/>
+        </mxCell>
         <mxCell id="3" value="2. Load Valid Exam Dates" style="swimlane;whiteSpace=wrap" parent="1" vertex="1">
-          <mxGeometry x="390" y="128" width="450" height="570" as="geometry"/>
+          <mxGeometry x="390" y="128" width="460" height="570" as="geometry"/>
         </mxCell>
         <mxCell id="Et23XqPSTgTjZvxR6nic-51" value="ViewConfiguration &#xa;(Adxstudio.Xrm.Web.UI.CrmEntityListView)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="3" vertex="1">
           <mxGeometry x="90" y="42" width="330" height="130" as="geometry"/>
