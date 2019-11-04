@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2019-11-04T18:52:12.139Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36" etag="-TycblFpdv0pq9830OI9" version="12.2.0" type="github" pages="1">
+<mxfile host="www.draw.io" modified="2019-11-04T19:38:40.758Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36" etag="_qg449Udcq2qQ0Y9BwYk" version="12.2.0" type="github" pages="1">
   <diagram name="Page-1" id="e7e014a7-5840-1c2e-5031-d8a46d1fe8dd">
     <mxGraphModel dx="2577" dy="748" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="#ffffff" math="0" shadow="0">
       <root>
@@ -189,18 +189,18 @@
           <mxGeometry x="940" y="1120" width="160" height="200" as="geometry"/>
         </mxCell>
         <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-51" value="GetLastApplicationBytype&#xa;(Microsoft.Xrm.Sdk.Entity)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="-195" y="720" width="330" height="104" as="geometry"/>
+          <mxGeometry x="-195" y="720" width="345" height="104" as="geometry"/>
         </mxCell>
         <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-52" value="+ OrganizationServiceContext: ServiceContext" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="Lq4-B1WF_Dr2A9U7XuFw-51">
-          <mxGeometry y="26" width="330" height="26" as="geometry"/>
+          <mxGeometry y="26" width="345" height="26" as="geometry"/>
         </mxCell>
         <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-53" value="+ EntityReference: Contact.ToEntityReference()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="Lq4-B1WF_Dr2A9U7XuFw-51">
-          <mxGeometry y="52" width="330" height="26" as="geometry"/>
+          <mxGeometry y="52" width="345" height="26" as="geometry"/>
         </mxCell>
         <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-54" value="+ applicationType: 824530002 (Application for Jurisprudence)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="Lq4-B1WF_Dr2A9U7XuFw-51">
-          <mxGeometry y="78" width="330" height="26" as="geometry"/>
+          <mxGeometry y="78" width="345" height="26" as="geometry"/>
         </mxCell>
-        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-56" value="datesViewConfiguration" style="html=1;" vertex="1" parent="1">
+        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-56" value="application" style="html=1;" vertex="1" parent="1">
           <mxGeometry x="-105" y="900" width="150" height="68" as="geometry"/>
         </mxCell>
         <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-57" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="1">
@@ -216,6 +216,9 @@
             <mxPoint x="-105" y="934" as="targetPoint"/>
             <mxPoint x="-240" y="934" as="sourcePoint"/>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-61" value="&lt;div&gt;var application = (from &lt;b&gt;app&lt;/b&gt; in adoxio_application where app.&lt;b&gt;adoxio_applicant &lt;/b&gt;= Contact&lt;/div&gt;&lt;div&gt;&amp;amp;&amp;amp; app.&lt;b&gt;adoxio_applicationtype&lt;/b&gt; = 824530002 (&lt;b&gt;Application for Jurisprudence&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;&amp;amp;&amp;amp; app.&lt;b&gt;adoxio_applicationstatus &lt;/b&gt;!= 6 (&lt;b&gt;Withdrawn&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;&amp;amp;&amp;amp; app.&lt;b&gt;adoxio_applicationstatus &lt;/b&gt;!= 7 (&lt;b&gt;Expired&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;orderby app.createdon descending&lt;/div&gt;&lt;div&gt;select app).FirstOrDefault();&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingTop=2;spacingLeft=2;spacingRight=2;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="-430" y="550" width="510" height="110" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
