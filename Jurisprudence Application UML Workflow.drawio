@@ -1,6 +1,6 @@
-<mxfile host="www.draw.io" modified="2019-11-05T15:27:04.671Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36" etag="sukboORl_xNXMV0WmGio" version="12.2.0" type="github" pages="1">
+<mxfile host="www.draw.io" modified="2019-11-05T16:16:33.511Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36" etag="rAAQbD6ICKA-aYL95ire" version="12.2.0" type="github" pages="1">
   <diagram name="Page-1" id="e7e014a7-5840-1c2e-5031-d8a46d1fe8dd">
-    <mxGraphModel dx="2577" dy="748" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="1408" dy="748" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
@@ -109,39 +109,6 @@
         <mxCell id="Et23XqPSTgTjZvxR6nic-41" value="&lt;h1&gt;Jurisprudence Application UML Workflow&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="255" y="70" width="510" height="50" as="geometry"/>
         </mxCell>
-        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-71" value="&lt;div&gt;var examinationDates = from &lt;b&gt;date&lt;/b&gt; in &lt;b&gt;&lt;i&gt;ctcmpao_examinationdate&lt;/i&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;where &lt;/b&gt;app.&lt;b&gt;adoxio_applicant &lt;/b&gt;= Contact&lt;/div&gt;&lt;div&gt;&amp;amp;&amp;amp; date.&lt;b&gt;adoxio_applicationtype&lt;/b&gt; = 824530002 (&lt;b&gt;Application for Jurisprudence&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;&amp;amp;&amp;amp; date.&lt;b&gt;ctcmpao_datestatus&lt;/b&gt;!= 4 (&lt;b&gt;Allow&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;select&amp;nbsp;&lt;b&gt;date&lt;/b&gt;;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;get lists of examination dates by type and status&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingTop=2;spacingLeft=2;spacingRight=2;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="-660" y="840" width="270" height="160" as="geometry"/>
-        </mxCell>
-        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-72" value="anyAvailableDates&lt;br&gt;!= null" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="-587" y="1110" width="124" height="110" as="geometry"/>
-        </mxCell>
-        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-73" value="return" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" target="Lq4-B1WF_Dr2A9U7XuFw-72" parent="1" source="Lq4-B1WF_Dr2A9U7XuFw-71">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-525" y="1170" as="targetPoint"/>
-            <mxPoint x="-525" y="1060" as="sourcePoint"/>
-            <Array as="points"/>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-74" value="Yes" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;align=left;verticalAlign=top;endArrow=open;endSize=8;strokeColor=#82b366;endFill=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#d5e8d4;" edge="1" source="Lq4-B1WF_Dr2A9U7XuFw-72" parent="1">
-          <mxGeometry x="-0.2695" y="10" relative="1" as="geometry">
-            <mxPoint x="-470" y="1370" as="targetPoint"/>
-            <mxPoint x="-643.5" y="1118.75" as="sourcePoint"/>
-            <Array as="points">
-              <mxPoint x="-525" y="1240"/>
-            </Array>
-            <mxPoint y="1" as="offset"/>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-75" value="No" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;align=left;verticalAlign=top;endArrow=open;endSize=8;strokeColor=#b85450;endFill=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fillColor=#f8cecc;" edge="1" source="Lq4-B1WF_Dr2A9U7XuFw-72" parent="1">
-          <mxGeometry x="-0.1355" y="-9" relative="1" as="geometry">
-            <mxPoint x="-508" y="1410" as="targetPoint"/>
-            <mxPoint x="-794.5" y="1059" as="sourcePoint"/>
-            <Array as="points">
-              <mxPoint x="-628" y="1290"/>
-            </Array>
-            <mxPoint x="1" y="1" as="offset"/>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="4" value="3. Check Is Application Access Blocked " style="swimlane;whiteSpace=wrap;startSize=23;" parent="1" vertex="1">
           <mxGeometry x="165" y="710" width="945" height="920" as="geometry"/>
         </mxCell>
@@ -233,6 +200,39 @@
               <mxPoint x="593" y="770"/>
             </Array>
             <mxPoint y="1" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-71" value="&lt;div&gt;var examinationDates = from &lt;b&gt;date&lt;/b&gt; in &lt;b&gt;&lt;i&gt;ctcmpao_examinationdate&lt;/i&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;where &lt;/b&gt;app.&lt;b&gt;adoxio_applicant &lt;/b&gt;= Contact&lt;/div&gt;&lt;div&gt;&amp;amp;&amp;amp; date.&lt;b&gt;adoxio_applicationtype&lt;/b&gt; = 824530002 (&lt;b&gt;Application for Jurisprudence&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;&amp;amp;&amp;amp; date.&lt;b&gt;ctcmpao_datestatus&lt;/b&gt;!= 4 (&lt;b&gt;Allow&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;select&amp;nbsp;&lt;b&gt;date&lt;/b&gt;;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;get lists of examination dates by type and status&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingTop=2;spacingLeft=2;spacingRight=2;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="4">
+          <mxGeometry x="65" y="325" width="270" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-72" value="anyAvailableDates&lt;br&gt;!= null" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="4">
+          <mxGeometry x="138" y="590" width="124" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-73" value="return" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" target="Lq4-B1WF_Dr2A9U7XuFw-72" parent="4" source="Lq4-B1WF_Dr2A9U7XuFw-71">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="655" as="targetPoint"/>
+            <mxPoint x="200" y="545" as="sourcePoint"/>
+            <Array as="points"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-74" value="Yes" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;align=left;verticalAlign=top;endArrow=open;endSize=8;strokeColor=#82b366;endFill=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#d5e8d4;" edge="1" source="Lq4-B1WF_Dr2A9U7XuFw-72" parent="4">
+          <mxGeometry x="-0.2695" y="10" relative="1" as="geometry">
+            <mxPoint x="255" y="855" as="targetPoint"/>
+            <mxPoint x="81.5" y="603.75" as="sourcePoint"/>
+            <Array as="points">
+              <mxPoint x="200" y="725"/>
+            </Array>
+            <mxPoint y="1" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-75" value="No" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;align=left;verticalAlign=top;endArrow=open;endSize=8;strokeColor=#b85450;endFill=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fillColor=#f8cecc;" edge="1" source="Lq4-B1WF_Dr2A9U7XuFw-72" parent="4">
+          <mxGeometry x="-0.1355" y="-9" relative="1" as="geometry">
+            <mxPoint x="217" y="895" as="targetPoint"/>
+            <mxPoint x="-69.5" y="544" as="sourcePoint"/>
+            <Array as="points">
+              <mxPoint x="97" y="775"/>
+            </Array>
+            <mxPoint x="1" y="1" as="offset"/>
           </mxGeometry>
         </mxCell>
       </root>
