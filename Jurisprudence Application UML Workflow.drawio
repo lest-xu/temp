@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2019-11-05T13:15:24.475Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36" etag="urMm4FYoEzmT5EZpETMW" version="12.2.0" type="github" pages="1">
+<mxfile host="www.draw.io" modified="2019-11-05T13:22:38.813Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36" etag="S2BYlgX8eXaK3D9rFUnI" version="12.2.0" type="github" pages="1">
   <diagram name="Page-1" id="e7e014a7-5840-1c2e-5031-d8a46d1fe8dd">
     <mxGraphModel dx="2577" dy="748" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="#ffffff" math="0" shadow="0">
       <root>
@@ -175,8 +175,8 @@
             <Array as="points"/>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-61" value="&lt;div&gt;var application = (from &lt;b&gt;app&lt;/b&gt; in adoxio_application&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;b&gt;where &lt;/b&gt;app.&lt;b&gt;adoxio_applicant &lt;/b&gt;= Contact&lt;/div&gt;&lt;div&gt;&amp;amp;&amp;amp; app.&lt;b&gt;adoxio_applicationtype&lt;/b&gt; = 824530002 (&lt;b&gt;Application for Jurisprudence&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;&amp;amp;&amp;amp; app.&lt;b&gt;adoxio_applicationstatus &lt;/b&gt;!= 6 (&lt;b&gt;Withdrawn&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;&amp;amp;&amp;amp; app.&lt;b&gt;adoxio_applicationstatus &lt;/b&gt;!= 7 (&lt;b&gt;Expired&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;orderby app.createdon descending&lt;/div&gt;&lt;div&gt;select app).&lt;b&gt;FirstOrDefault&lt;/b&gt;();&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingTop=2;spacingLeft=2;spacingRight=2;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="-195" y="850" width="440" height="110" as="geometry"/>
+        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-61" value="&lt;div&gt;var application = (from &lt;b&gt;app&lt;/b&gt; in adoxio_application&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;b&gt;where &lt;/b&gt;app.&lt;b&gt;adoxio_applicant &lt;/b&gt;= Contact&lt;/div&gt;&lt;div&gt;&amp;amp;&amp;amp; app.&lt;b&gt;adoxio_applicationtype&lt;/b&gt; = 824530002 (&lt;b&gt;Application for Jurisprudence&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;&amp;amp;&amp;amp; app.&lt;b&gt;adoxio_applicationstatus &lt;/b&gt;!= 6 (&lt;b&gt;Withdrawn&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;&amp;amp;&amp;amp; app.&lt;b&gt;adoxio_applicationstatus &lt;/b&gt;!= 7 (&lt;b&gt;Expired&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;orderby app.createdon descending&lt;/div&gt;&lt;div&gt;select app).&lt;b&gt;FirstOrDefault&lt;/b&gt;();&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;get last application by type and status&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingTop=2;spacingLeft=2;spacingRight=2;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="-195" y="850" width="440" height="140" as="geometry"/>
         </mxCell>
         <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-66" value="sql" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" target="Lq4-B1WF_Dr2A9U7XuFw-61">
           <mxGeometry width="80" relative="1" as="geometry">
@@ -200,13 +200,40 @@
         </mxCell>
         <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-70" value="Yes" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;align=left;verticalAlign=top;endArrow=open;endSize=8;strokeColor=#82b366;endFill=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#d5e8d4;" edge="1" source="Lq4-B1WF_Dr2A9U7XuFw-68" parent="1">
           <mxGeometry x="-0.2695" y="10" relative="1" as="geometry">
-            <mxPoint x="25" y="1300" as="targetPoint"/>
+            <mxPoint x="25" y="1260" as="targetPoint"/>
             <mxPoint x="-95.5" y="1068.75" as="sourcePoint"/>
             <mxPoint y="1" as="offset"/>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-71" value="&lt;div&gt;var examinationDates = from &lt;b&gt;date&lt;/b&gt; in ctcmpao_examinationdate&lt;/div&gt;&lt;div&gt;&lt;b&gt;where &lt;/b&gt;app.&lt;b&gt;adoxio_applicant &lt;/b&gt;= Contact&lt;/div&gt;&lt;div&gt;&amp;amp;&amp;amp; date.&lt;b&gt;adoxio_applicationtype&lt;/b&gt; = 824530002 (&lt;b&gt;Application for Jurisprudence&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;&amp;amp;&amp;amp; date.&lt;b&gt;ctcmpao_datestatus&lt;/b&gt;!= 4 (&lt;b&gt;Allow&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;select&amp;nbsp;&lt;b&gt;date&lt;/b&gt;;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingTop=2;spacingLeft=2;spacingRight=2;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="-640" y="1005" width="450" height="95" as="geometry"/>
+        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-71" value="&lt;div&gt;var examinationDates = from &lt;b&gt;date&lt;/b&gt; in ctcmpao_examinationdate&lt;/div&gt;&lt;div&gt;&lt;b&gt;where &lt;/b&gt;app.&lt;b&gt;adoxio_applicant &lt;/b&gt;= Contact&lt;/div&gt;&lt;div&gt;&amp;amp;&amp;amp; date.&lt;b&gt;adoxio_applicationtype&lt;/b&gt; = 824530002 (&lt;b&gt;Application for Jurisprudence&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;&amp;amp;&amp;amp; date.&lt;b&gt;ctcmpao_datestatus&lt;/b&gt;!= 4 (&lt;b&gt;Allow&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;select&amp;nbsp;&lt;b&gt;date&lt;/b&gt;;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;get lists of examination dates by type and status&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingTop=2;spacingLeft=2;spacingRight=2;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="-640" y="990" width="450" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-72" value="anyAvailableDates&lt;br&gt;!= null" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="-517" y="1200" width="124" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-73" value="return" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" target="Lq4-B1WF_Dr2A9U7XuFw-72" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-455" y="1210" as="targetPoint"/>
+            <mxPoint x="-455" y="1100" as="sourcePoint"/>
+            <Array as="points"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-74" value="Yes" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;align=left;verticalAlign=top;endArrow=open;endSize=8;strokeColor=#82b366;endFill=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#d5e8d4;" edge="1" source="Lq4-B1WF_Dr2A9U7XuFw-72" parent="1">
+          <mxGeometry x="-0.2695" y="10" relative="1" as="geometry">
+            <mxPoint x="-455" y="1400" as="targetPoint"/>
+            <mxPoint x="-575.5" y="1208.75" as="sourcePoint"/>
+            <mxPoint y="1" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-75" value="No" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;align=left;verticalAlign=top;endArrow=open;endSize=8;strokeColor=#b85450;endFill=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fillColor=#f8cecc;" edge="1" source="Lq4-B1WF_Dr2A9U7XuFw-72" parent="1">
+          <mxGeometry x="-0.1355" y="-9" relative="1" as="geometry">
+            <mxPoint x="-440" y="1500" as="targetPoint"/>
+            <mxPoint x="-726.5" y="1149" as="sourcePoint"/>
+            <Array as="points">
+              <mxPoint x="-560" y="1380"/>
+            </Array>
+            <mxPoint x="1" y="1" as="offset"/>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
