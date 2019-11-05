@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2019-11-04T20:46:16.823Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36" etag="H7o5K5wMTlhCfUOxI1rM" version="12.2.0" type="github" pages="1">
+<mxfile host="www.draw.io" modified="2019-11-05T13:15:24.475Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36" etag="urMm4FYoEzmT5EZpETMW" version="12.2.0" type="github" pages="1">
   <diagram name="Page-1" id="e7e014a7-5840-1c2e-5031-d8a46d1fe8dd">
     <mxGraphModel dx="2577" dy="748" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="#ffffff" math="0" shadow="0">
       <root>
@@ -204,6 +204,9 @@
             <mxPoint x="-95.5" y="1068.75" as="sourcePoint"/>
             <mxPoint y="1" as="offset"/>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="Lq4-B1WF_Dr2A9U7XuFw-71" value="&lt;div&gt;var examinationDates = from &lt;b&gt;date&lt;/b&gt; in ctcmpao_examinationdate&lt;/div&gt;&lt;div&gt;&lt;b&gt;where &lt;/b&gt;app.&lt;b&gt;adoxio_applicant &lt;/b&gt;= Contact&lt;/div&gt;&lt;div&gt;&amp;amp;&amp;amp; date.&lt;b&gt;adoxio_applicationtype&lt;/b&gt; = 824530002 (&lt;b&gt;Application for Jurisprudence&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;&amp;amp;&amp;amp; date.&lt;b&gt;ctcmpao_datestatus&lt;/b&gt;!= 4 (&lt;b&gt;Allow&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;select&amp;nbsp;&lt;b&gt;date&lt;/b&gt;;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingTop=2;spacingLeft=2;spacingRight=2;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="-640" y="1005" width="450" height="95" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
