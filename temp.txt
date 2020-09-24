@@ -1,0 +1,1 @@
+https://share-101.firebaseio.com/logs.json
