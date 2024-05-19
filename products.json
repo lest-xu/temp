@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Apple",
+    "category": "fruits",
+    "quantity": 10,
+    "price": 1.5
+  },
+  {
+    "id": 2,
+    "name": "Orange",
+    "category": "fruits",
+    "quantity": 12,
+    "price": 2.5
+  },
+  {
+    "id": 3,
+    "name": "Blueberry",
+    "category": "fruits",
+    "quantity": 30,
+    "price": 4.5
+  },
+  {
+    "id": 4,
+    "name": "Strawberry",
+    "category": "fruits",
+    "quantity": 25,
+    "price": 3.5
+  },
+  {
+    "id": 5,
+    "name": "Carrot",
+    "category": "vegetables",
+    "quantity": 7,
+    "price": 0.5
+  },
+  {
+    "id": 6,
+    "name": "Tomato",
+    "category": "vegetables",
+    "quantity": 5,
+    "price": 1.2
+  },
+  {
+    "id": 7,
+    "name": "Cucumber",
+    "category": "vegetables",
+    "quantity": 3,
+    "price": 1.9
+  },
+  {
+    "id": 8,
+    "name": "Lettuce",
+    "category": "vegetables",
+    "quantity": 2,
+    "price": 1.5
+  }
+]
