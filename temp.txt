@@ -1,85 +1,55 @@
-using System.IO;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Azure.WebJobs;
-using Microsoft.Extensions.Logging;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
-using Newtonsoft.Json;
-using CCWIS.FunctionApp;
-using Microsoft.Extensions.Configuration;
-using Microsoft.QualityTools.Testing.Fakes;
-using Microsoft.Extensions.Configuration.Fakes;
-
-namespace CCWIS.FunctionApp.Tests
-{
-    [TestClass]
-    public class FunctionTests
-    {
-        [TestMethod]
+ [Fact]
         public async Task Run_ReturnsOkObjectResult()
         {
-            using (ShimsContext.Create())
+            // Arrange
+            var request = new Mock<HttpRequest>();
+            var logger = new Mock<ILogger>();
+            var context = new Mock<ExecutionContext>();
+
+            var inMemorySettings = new Dictionary<string, string> {
+                {"CCWISApp:APIUrl", "http://mockapiurl.com"},
+                {"CCWISApp:OAuthTokenUrl", "http://mocktokenurl.com"},
+                {"CCWISApp:OAuthClientID", "mockClientID"},
+                {"CCWISApp:OAuthClientSecret", "mockClientSecret"},
+                {"CCWISApp:OAuthScope", "mockScope"}
+            };
+
+            var configuration = new ConfigurationBuilder()
+                .AddInMemoryCollection(inMemorySettings)
+                .Build();
+
+            // Mock the GetResults method
+            var mockCommonUtilities = new Mock<CommonUtilities>();
+            mockCommonUtilities
+                .Setup(cu => cu.GetResults(It.IsAny<string>(), It.IsAny<ILogger>(), It.IsAny<ExecutionContext>()))
+                .Returns("mocked result");
+
+            // Use Reflection to set the private configuration field in CommonUtilities
+            var commonUtilitiesType = typeof(CommonUtilities);
+            var configurationField = commonUtilitiesType.GetField("config", BindingFlags.NonPublic | BindingFlags.Static);
+            configurationField.SetValue(null, configuration);
+
+            var function = new Function(); // Assuming a parameterless constructor
+
+            var requestBody = new
             {
-                // Arrange
-                var request = new Mock<HttpRequest>();
-                var logger = new Mock<ILogger>();
-                var context = new Mock<ExecutionContext>();
+                value = "some_value",
+                type = "some_type",
+                parentvalue = "some_parent_value"
+            };
+            var jsonRequestBody = JsonConvert.SerializeObject(requestBody);
 
-                var inMemorySettings = new Dictionary<string, string> {
-                    {"CCWISApp:APIUrl", "http://mockapiurl.com"},
-                    {"CCWISApp:OAuthTokenUrl", "http://mocktokenurl.com"},
-                    {"CCWISApp:OAuthClientID", "mockClientID"},
-                    {"CCWISApp:OAuthClientSecret", "mockClientSecret"},
-                    {"CCWISApp:OAuthScope", "mockScope"}
-                };
+            var memoryStream = new MemoryStream(Encoding.UTF8.GetBytes(jsonRequestBody));
+            request.Setup(r => r.Body).Returns(memoryStream);
 
-                var configuration = new ConfigurationBuilder()
-                    .AddInMemoryCollection(inMemorySettings)
-                    .Build();
+            // Act
+            var result = await function.Run(request.Object, logger.Object, context.Object);
 
-                // Shim ConfigurationBinder.Get<T> method
-                ShimConfigurationBinder.GetOf1IConfiguration((config) =>
-                {
-                    if (config == configuration)
-                    {
-                        return (object)new CommonUtilities();
-                    }
-                    return null;
-                });
+            // Assert
+            var okResult = Assert.IsType<OkObjectResult>(result);
+            var resObj = (okResult.Value as dynamic);
 
-                // Shim the GetResults method of CommonUtilities
-                CCWIS.FunctionApp.Fakes.ShimCommonUtilities.GetResultsStringILoggerExecutionContext = (query, log, ctx) =>
-                {
-                    return "mocked result";
-                };
-
-                var function = new Function(); // Assuming a parameterless constructor
-
-                var requestBody = new
-                {
-                    value = "some_value",
-                    type = "some_type",
-                    parentvalue = "some_parent_value"
-                };
-                var jsonRequestBody = JsonConvert.SerializeObject(requestBody);
-
-                var memoryStream = new MemoryStream(Encoding.UTF8.GetBytes(jsonRequestBody));
-                request.Setup(r => r.Body).Returns(memoryStream);
-
-                // Act
-                var result = await function.Run(request.Object, logger.Object, context.Object);
-
-                // Assert
-                var okResult = Assert.IsType<OkObjectResult>(result);
-                var resObj = (okResult.Value as dynamic);
-
-                Assert.NotNull(resObj);
-                Assert.Equal("some_value", resObj.value);
-                Assert.Equal("some_display_name", resObj.name);
-            }
+            Assert.NotNull(resObj);
+            Assert.Equal("some_value", resObj.value);
+            Assert.Equal("some_display_name", resObj.name);
         }
-    }
-}
