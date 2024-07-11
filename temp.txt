@@ -53,3 +53,26 @@
             Assert.Equal("some_value", resObj.value);
             Assert.Equal("some_display_name", resObj.name);
         }
+
+
+[Fact]
+    public async Task AppInsightIntegration_ReturnsOkResult()
+    {
+        // Arrange
+        var crmData = new
+        {
+            EntityName = "TestEntity",
+            AppInsightUrl = "InstrumentationKey=your-instrumentation-key"
+        };
+        var requestBody = JsonConvert.SerializeObject(crmData);
+        var request = new Mock<HttpRequest>();
+        request.Setup(r => r.Body).Returns(new MemoryStream(Encoding.UTF8.GetBytes(requestBody)));
+
+        var logger = new Mock<ILogger>();
+
+        // Act
+        var result = await Function.Run(request.Object, logger.Object);
+
+        // Assert
+        Assert.IsType<OkResult>(result);
+    }
